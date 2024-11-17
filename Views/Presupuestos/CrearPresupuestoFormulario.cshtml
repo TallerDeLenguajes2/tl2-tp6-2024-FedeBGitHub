@@ -1,0 +1,15 @@
+@model Presupuesto
+
+<form asp-controller="Presupuestos" asp-action="CrearPresupuesto">
+    <input hidden asp-for="@Model.IdPresupuesto">
+    <div class="form-group">
+        <label asp-for="@Model.NombreDestinatario"></label>
+        <input asp-for="@Model.NombreDestinatario" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.FechaCreacion"></label>
+        <input asp-for="@Model.FechaCreacion" type="date" class="form-control" />
+    </div>
+    <input class="btn btn-primary m-1 " type="submit" value="Registrar"></input>
+</form>

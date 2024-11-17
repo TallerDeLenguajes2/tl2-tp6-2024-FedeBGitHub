@@ -1,0 +1,40 @@
+@model ProductosYpresupuestoViewModel
+
+<div  class="border  m-1 rounded p-1">
+    <p>Id: @Model.IdPresupuesto </p>
+    <p>Nombre Destinatario: @Model.NombreDestinatario </p>
+    <p>Fecha Creacion: @Model.FechaCreacion </p>
+<div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Idprod</th>
+            <th>Descripcion</th>
+            <th>precio</th>
+            <th>Añadir</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach(Producto p in Model.listaProductos)
+{
+        <tr>
+            <th>@p.IdProducto</th>
+            <td>@p.Descripcion</td>
+            <td>@p.Precio</td>
+            <td>
+                <form asp-controller="Presupuestos" asp-action="AddProducto">
+                    <input type="hidden" name="IdPresupuesto" value="@Model.IdPresupuesto"/>
+                    <input type="hidden" name="IdProducto" value="@p.IdProducto"/>
+                    <label asp-for="@Model.Cantidad"></label>
+                    <div class="d-flex">
+                        <input class="form-control w-25" asp-for="@Model.Cantidad"  />
+                        <input class="btn btn-primary ms-3" type="submit" value="Añadir"></input>
+                    </div>
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

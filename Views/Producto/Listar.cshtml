@@ -1,0 +1,22 @@
+
+@model List<Producto>
+
+
+
+<ul>
+    @{
+        //int hola = 10;
+    }
+        
+         @foreach(Producto p in Model)
+        {
+            <div  class="border  m-1 rounded p-1">
+                <p>Id: @p.IdProducto </p>
+                <p>Descripcion: @p.Descripcion </p>
+                <p>precio: @p.Precio </p>
+            </div>
+            
+        }
+</ul>
+
+
