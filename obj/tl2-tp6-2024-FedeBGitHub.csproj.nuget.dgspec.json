@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\Nueva carpeta\\v2\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj": {}
+    "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj": {}
   },
   "projects": {
-    "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\Nueva carpeta\\v2\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj": {
+    "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\Nueva carpeta\\v2\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj",
+        "projectUniqueName": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj",
         "projectName": "tl2-tp6-2024-FedeBGitHub",
-        "projectPath": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\Nueva carpeta\\v2\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj",
+        "projectPath": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\tl2-tp6-2024-FedeBGitHub.csproj",
         "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-        "outputPath": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\Nueva carpeta\\v2\\tl2-tp6-2024-FedeBGitHub\\obj\\",
+        "outputPath": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config"

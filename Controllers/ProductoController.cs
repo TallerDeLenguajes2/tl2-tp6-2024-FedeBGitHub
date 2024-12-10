@@ -18,12 +18,6 @@ public class ProductoController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-
     [HttpGet]
     public IActionResult Listar()
     {
@@ -42,11 +36,11 @@ public class ProductoController : Controller
     public IActionResult CrearProducto(Producto Producto)
     {
         productoRepository.CrearProducto(Producto);
-        return RedirectToAction("Index");
+        return RedirectToAction("Listar");
     }
 
     [HttpGet]
-    public IActionResult ModificarProducto()
+    public IActionResult ModificarProductoFormulario(Producto producto)
     {
         return View(new Producto());
     }
@@ -54,19 +48,19 @@ public class ProductoController : Controller
     public IActionResult ModificarProducto(Producto Producto)
     {
         productoRepository.modificarProducto( Producto.IdProducto, Producto);
-        return RedirectToAction("Index");
+        return RedirectToAction("Listar");
     }
 
     [HttpGet]
-    public IActionResult EliminarProducto(int id)
+    public IActionResult EliminarConfirmacion(Producto producto)
     {
-        Producto producto = productoRepository.productoPorId(id);
         return View(producto);
     }
+
     [HttpPost]
-    public IActionResult EliminarMetodo(Producto producto)
+    public IActionResult EliminarProducto(int IdProducto)
     {
-        productoRepository.EliminarProducto(producto.IdProducto);
-        return RedirectToAction("Index");
+        productoRepository.EliminarProducto(IdProducto);
+        return RedirectToAction("Listar");
     }
 }

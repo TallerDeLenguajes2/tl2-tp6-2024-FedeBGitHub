@@ -16,10 +16,9 @@ SELECT * FROM Presupuestos;
 SELECT * FROM Presupuestos_viejo;
 
 -- En SQlite no se puede agregar una restriccion de clave foranea cuando la tabla ya a sido creada por lo tanto la voy a crear de nuevo
-CREATE TABLE PresupuestosNuevo ( idPresupuesto INT AUTO_INCREMENT,
+CREATE TABLE PresupuestosNuevo ( idPresupuesto INTEGER PRIMARY KEY AUTOINCREMENT,
                                  ClienteID INT NOT NULL,
                                  FechaCreacion DATE NOT NULL,
-                                 CONSTRAINT pk_Presupuestos PRIMARY KEY (idPresupuesto),
                                  CONSTRAINT fk_Clientes FOREIGN KEY (ClienteID) REFERENCES Clientes(ClienteID)
                                 );
                                 

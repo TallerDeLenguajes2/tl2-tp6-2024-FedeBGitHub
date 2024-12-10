@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tl2-tp6-2024-FedeBGitHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e5152e7c0ed9ed681c8684ab1a0f97bb2317af9")]
 [assembly: System.Reflection.AssemblyProductAttribute("tl2-tp6-2024-FedeBGitHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tl2-tp6-2024-FedeBGitHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

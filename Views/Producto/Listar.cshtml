@@ -1,22 +1,45 @@
-
 @model List<Producto>
 
+        <form asp-controller="Producto" asp-action="CrearProducto" method="get">
+            <input class="btn btn-success" type="submit" value="Crear Producto"></input>
+        </form>
 
-
-<ul>
-    @{
-        //int hola = 10;
-    }
-        
-         @foreach(Producto p in Model)
-        {
-            <div  class="border  m-1 rounded p-1">
-                <p>Id: @p.IdProducto </p>
-                <p>Descripcion: @p.Descripcion </p>
-                <p>precio: @p.Precio </p>
-            </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+            <tbody>
             
+        @foreach(var p in Model)
+        {
+            <tr>
+                <th> @p.IdProducto</th>
+                <td> @p.Descripcion</td>
+                <td> @p.Precio</td>
+                <td>
+                    <form asp-controller="Producto" asp-action="ModificarProductoFormulario" method="get">
+                        <input type="hidden" name="IdProducto" value="@p.IdProducto" />
+                        <input type="hidden" name="Descripcion" value="@p.Descripcion" />
+                        <input type="hidden" name="Precio" value="@p.Precio" />
+                        <input class="btn btn-warning" type="submit" value="Modificar"></input>
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Producto" asp-action="EliminarConfirmacion" method="get">
+                        <input type="hidden" name="IdProducto" value="@p.IdProducto" />
+                        <input type="hidden" name="Descripcion" value="@p.Descripcion" />
+                        <input type="hidden" name="Precio" value="@p.Precio" />
+                        <input class="btn btn-danger" type="submit" value="Eliminar"></input>
+                    </form>
+                </td>
+            </tr>
         }
-</ul>
-
+            </tbody>
+        </table>
 
