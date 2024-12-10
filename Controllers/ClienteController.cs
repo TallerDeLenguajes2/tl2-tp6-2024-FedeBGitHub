@@ -7,26 +7,64 @@ using repositorys;
 
 namespace tl2_tp6_2024_FedeBGitHub.Controllers;
 
-public class PresupuestosController : Controller
+public class ClienteController : Controller
 {
-    private  PresupuestosRepository presupuestoRepository;
-    private readonly ILogger<ProductoController> _logger;
+    private  ClienteRepository clienteRepository;
+    private readonly ILogger<ClienteController> _logger;
 
-    public PresupuestosController(ILogger<ProductoController> logger)
+    public ClienteController(ILogger<ClienteController> logger)
     {
-        presupuestoRepository = new PresupuestosRepository();
+        clienteRepository = new ClienteRepository();
         _logger = logger;
     }
 
     
     [HttpGet]
-    public IActionResult Listar_Presupuesto()
+    public IActionResult ListarCliente()
     {
-        List<Presupuesto> listaPresupuestos = presupuestoRepository.ObtenerPresupuestos();
-        return View(listaPresupuestos);
+        List<Cliente> listaClientes = clienteRepository.listarClientes();
+        return View(listaClientes);
     }
 
-    
+    [HttpGet]
+    public IActionResult CrearClienteFormulario()
+    {
+        return View(new Cliente());
+    }
+
+    [HttpPost]
+    public IActionResult CrearCliente(Cliente cliente)
+    {
+        clienteRepository.CrearCliente(cliente);
+        return RedirectToAction("ListarCliente");
+    }
+
+    [HttpGet]
+    public IActionResult ModificarClienteFormulario(Cliente cliente)
+    {
+        return View(cliente);
+    }
+
+    [HttpPost]
+    public IActionResult ModificarCliente(Cliente cliente)
+    {
+        clienteRepository.modificarCliente(cliente);
+        return RedirectToAction("ListarCliente");
+    }
+
+    [HttpGet]
+    public IActionResult EliminarConfirmacion(Cliente cliente)
+    {
+        return View(cliente);
+    }
+
+    [HttpPost]
+    public IActionResult EliminarCliente(int ClienteId)
+    {
+        clienteRepository.EliminarCliente(ClienteId);
+        return RedirectToAction("ListarCliente");
+    }
+    /*
     [HttpPost]
     public IActionResult ObtenerDetalle(int id)
     {
@@ -94,6 +132,7 @@ public class PresupuestosController : Controller
         presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
         return RedirectToAction("Listar_Presupuesto");
     }
+    */
 
     //asp-for="NombreDestinatario" Genera name, id y value
 

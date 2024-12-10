@@ -1,0 +1,21 @@
+@model Cliente
+
+<div class="row align-items-center justify-content-center ">
+    <div class="col-6 align-self-center border border-2 rounded p-3" >
+        <h4>Seguro que quieres eliminar el Cliente:</h4>  
+        <p>ClienteId: @Model.ClienteId</p>
+        <p>Nombre: @Model.Nombre</p> 
+        <p>Email: @Model.Email</p>
+        <p>Telefono: @Model.Email</p>
+        <div class="d-flex justify-content-center align-items-center">
+            <form class="m-1 text-center" asp-controller="Cliente" asp-action="EliminarCliente" method="post">
+                <input type="hidden" name="ClienteId" value="@Model.ClienteId" />
+                <input class="btn btn-danger" type="submit" value="Eliminar"></input>
+            </form>
+            <form class=" text-center" asp-controller="Cliente" asp-action="ListarCliente" method="get">
+                <input class="btn btn-info" type="submit" value="Cancelar"></input>
+            </form>
+        </div>
+        
+    </div>
+</div>

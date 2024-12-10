@@ -35,9 +35,9 @@ public class PresupuestosRepository
                 while(reader.Read())
                 {
                     int id = Convert.ToInt32(reader["idPresupuesto"]);
-                    string nombre = Convert.ToString(reader["NombreDestinatario"]);
+                    //string nombre = Convert.ToString(reader["NombreDestinatario"]);
                     DateTime fecha = Convert.ToDateTime(reader["FechaCreacion"]);
-                    p.Add(new Presupuesto(id, nombre, fecha));
+                    p.Add(new Presupuesto(id, "sdsd", fecha));
                 }
             }
             connection.Close();

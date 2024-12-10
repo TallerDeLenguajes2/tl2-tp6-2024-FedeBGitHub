@@ -1,0 +1,48 @@
+@model List<Cliente>
+
+        <form asp-controller="Cliente" asp-action="CrearClienteFormulario" method="get">
+            <input class="btn btn-success" type="submit" value="Crear Cliente"></input>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+            <tbody>
+            
+        @foreach(var c in Model)
+        {
+            <tr>
+                <th> @c.ClienteId</th>
+                <td> @c.Nombre</td>
+                <td> @c.Email</td>
+                <td> @c.Telefono</td>
+                <td>
+                    <form asp-controller="Cliente" asp-action="ModificarClienteFormulario" method="get">
+                        <input type="hidden" name="ClienteId" value="@c.ClienteId" />
+                        <input type="hidden" name="Nombre" value="@c.Nombre" />
+                        <input type="hidden" name="Email" value="@c.Email" />
+                        <input type="hidden" name="Telefono" value="@c.Telefono" />
+                        <input class="btn btn-warning" type="submit" value="Modificar"></input>
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Cliente" asp-action="EliminarConfirmacion" method="get">
+                        <input type="hidden" name="ClienteId" value="@c.ClienteId" />
+                        <input type="hidden" name="Nombre" value="@c.Nombre" />
+                        <input type="hidden" name="Email" value="@c.Email" />
+                        <input type="hidden" name="Telefono" value="@c.Telefono" />
+                        <input class="btn btn-danger" type="submit" value="Eliminar"></input>
+                    </form>
+                </td>
+            </tr>
+        }
+            </tbody>
+        </table>
