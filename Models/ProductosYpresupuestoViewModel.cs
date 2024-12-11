@@ -1,7 +1,7 @@
 public class ProductosYpresupuestoViewModel
 {
     public int IdPresupuesto { get; set; }
-    public string NombreDestinatario { get; set; }
+    public string ClienteId { get; set; }
     public DateTime FechaCreacion { get; set; }
             
     public int IdProducto { get; set; }

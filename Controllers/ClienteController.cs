@@ -65,57 +65,7 @@ public class ClienteController : Controller
         return RedirectToAction("ListarCliente");
     }
     /*
-    [HttpPost]
-    public IActionResult ObtenerDetalle(int id)
-    {
-        Presupuesto presupuesto = presupuestoRepository.ObtenerDetalle(id);
-        return View(presupuesto);
-    }
-
-    [HttpPost]
-    public IActionResult CrearPresupuestoFormulario()
-    {
-        return View(new Presupuesto());
-    }
-
-    [HttpPost]
-    public IActionResult CrearPresupuesto(Presupuesto presupuesto)
-    {
-        presupuestoRepository.CrearPresupuesto(presupuesto);
-        return RedirectToAction("Listar_Presupuesto");
-    }
-
-    [HttpPost]
-    public IActionResult ModificarPresupuestoForm(Presupuesto presupuesto)
-    {
-        return View(presupuesto);
-    }
-
-    [HttpPost]
-    public IActionResult ModificarPresupuesto(Presupuesto presupuesto)
-    {
-        presupuestoRepository.modificarPresupuesto(presupuesto);
-        return RedirectToAction("Listar_Presupuesto");
-    }
-
-    [HttpPost]
-    public IActionResult EliminarPresupuestoPag(Presupuesto presupuesto)
-    {
-        return View(presupuesto);
-    }
-
-    [HttpPost]
-    public IActionResult EliminarPresupuesto(int IdPresupuesto)
-    {
-        presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
-        return RedirectToAction("Listar_Presupuesto");
-    }
-
-    [HttpGet]
-    public IActionResult VolverAInicio()
-    {
-        return RedirectToAction("Listar_Presupuesto");
-    }
+   
 
     [HttpPost]
     public IActionResult AddProductoForm(ProductosYpresupuestoViewModel vm)

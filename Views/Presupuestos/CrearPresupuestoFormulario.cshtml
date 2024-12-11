@@ -1,15 +1,27 @@
-@model Presupuesto
+@model PresupuestoViewModel
 
-<form asp-controller="Presupuestos" asp-action="CrearCliente">
-    <input hidden asp-for="@Model.IdPresupuesto">
+
+
+
+<form asp-controller="Presupuestos" asp-action="CrearPresupuesto">
+    <input hidden asp-for="@Model.presupuesto.IdPresupuesto">
     <div class="form-group">
-        <label asp-for="@Model.NombreDestinatario"></label>
-        <input asp-for="@Model.NombreDestinatario" class="form-control" />
+        <label asp-for="@Model.presupuesto.FechaCreacion"></label>
+        <input asp-for="@Model.presupuesto.FechaCreacion" type="date" class="form-control" />
     </div>
 
     <div class="form-group">
-        <label asp-for="@Model.FechaCreacion"></label>
-        <input asp-for="@Model.FechaCreacion" type="date" class="form-control" />
+        <label>Seleccionar Cliente:</label>
+        @foreach (var cliente in Model.listaClientes)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="ClienteSeleccionado" value="@cliente.ClienteId" id="@cliente.ClienteId">
+                <label class="form-check-label" for="@cliente.ClienteId">
+                    @cliente.Nombre
+                </label>
+            </div>
+        }
     </div>
+    
     <input class="btn btn-primary m-1 " type="submit" value="Registrar"></input>
 </form>

@@ -6,8 +6,8 @@
         <input asp-for="IdPresupuesto" class="form-control" readonly/>
     </div>
     <div class="form-group">
-        <label asp-for="NombreDestinatario"></label>
-        <input asp-for="NombreDestinatario" class="form-control" />
+        <label asp-for="@Model.Cliente.ClienteId"></label>
+        <input asp-for="@Model.Cliente.ClienteId" class="form-control" />
     </div>
 
     <div class="form-group">

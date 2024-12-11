@@ -8,7 +8,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Nombre Destinatario</th>
+                    <th>ClienteId</th>
                     <th>Fecha Creacion</th>
                     <th>Ver más</th>
                     <th>Modificar</th>
@@ -21,18 +21,19 @@
         {
             <tr>
                 <th> @p.IdPresupuesto</th>
-                <td> @p.NombreDestinatario</td>
+                <td> @p.Cliente.ClienteId</td>
                 <td> @p.FechaCreacion.ToString("dd/MM/yyyy")</td>
                 <td>
                     <form asp-controller="Presupuestos" asp-action="ObtenerDetalle">
                     <input hidden name="id" value="@p.IdPresupuesto">
+                    <input hidden name="ClienteId" value="@p.Cliente.ClienteId">
                     <input class="btn btn-primary" type="submit" value="Ver más"></input>
                     </form>
                 </td>
                 <td>
                     <form asp-controller="Presupuestos" asp-action="ModificarPresupuestoForm">
                         <input type="hidden" name="IdPresupuesto" value="@p.IdPresupuesto" />
-                        <input type="hidden" name="NombreDestinatario" value="@p.NombreDestinatario" />
+                        <input type="hidden" name="ClienteId" value="@p.Cliente.ClienteId" />
                         <input type="hidden" name="FechaCreacion" value="@p.FechaCreacion.Date" />
                         <input class="btn btn-warning" type="submit" value="Modificar"></input>
                     </form>
@@ -40,7 +41,7 @@
                 <td>
                     <form asp-controller="Presupuestos" asp-action="EliminarPresupuestoPag">
                     <input type="hidden" name="IdPresupuesto" value="@p.IdPresupuesto" />
-                    <input type="hidden" name="NombreDestinatario" value="@p.NombreDestinatario" />
+                    <input type="hidden" name="ClienteId" value="@p.Cliente.ClienteId" />
                     <input type="hidden" name="FechaCreacion" value="@p.FechaCreacion.Date" />
                     <input class="btn btn-danger" type="submit" value="Eliminar"></input>
                     </form>

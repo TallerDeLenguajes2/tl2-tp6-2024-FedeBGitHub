@@ -4,14 +4,14 @@
     <div class="col-6 align-self-center border border-2 rounded p-3" >
         <h4>Seguro que quieres eliminar el Presupuesto:</h4>  
         <p>Id: @Model.IdPresupuesto</p>
-        <p>Nombre Destinatario: @Model.NombreDestinatario</p> 
+        <p>ClienteId: @Model.Cliente.ClienteId</p> 
         <p>Fecha: @Model.FechaCreacion</p>
         <div class="d-flex justify-content-center align-items-center">
-            <form class="m-1 text-center" asp-controller="Presupuestos" asp-action="EliminarPresupuesto" method="get">
+            <form class="m-1 text-center" asp-controller="Presupuestos" asp-action="EliminarPresupuesto" method="post">
                 <input type="hidden" name="IdPresupuesto" value="@Model.IdPresupuesto" />
                 <input class="btn btn-danger" type="submit" value="Eliminar"></input>
             </form>
-            <form class=" text-center" asp-controller="Presupuestos" asp-action="VolverAInicio" method="get">
+            <form class=" text-center" asp-controller="Presupuestos" asp-action="Listar_Presupuesto" method="get">
                 <input class="btn btn-info" type="submit" value="Cancelar"></input>
             </form>
         </div>

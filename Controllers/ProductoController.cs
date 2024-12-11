@@ -63,4 +63,5 @@ public class ProductoController : Controller
         productoRepository.EliminarProducto(IdProducto);
         return RedirectToAction("Listar");
     }
+    
 }

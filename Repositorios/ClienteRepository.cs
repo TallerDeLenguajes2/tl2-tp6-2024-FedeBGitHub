@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using  Microsoft.Data.Sqlite;
 
 namespace repositorys;
@@ -103,4 +104,30 @@ public class ClienteRepository
         }
     } 
 
+    public Cliente obtenerCliente(int id)
+    {
+        Cliente c = null;
+        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        {
+            string query = "SELECT * FROM Clientes WHERE ClienteId = @id";
+            connection.Open();
+            SqliteCommand command = new SqliteCommand(query, connection);
+            command.Parameters.Add(new SqliteParameter("@id",id));
+            using (SqliteDataReader reader = command.ExecuteReader())
+            {
+
+            
+                while (reader.Read())
+                {
+                    c = new Cliente();
+                    c.ClienteId = Convert.ToInt32(reader["ClienteId"]);
+                    c.Nombre = Convert.ToString(reader["Nombre"]);
+                    c.Email = Convert.ToString(reader["Email"]);;
+                    c.Telefono = Convert.ToString(reader["Telefono"]);
+                }
+            }
+            connection.Close();
+        }
+        return c;
+    }
 }

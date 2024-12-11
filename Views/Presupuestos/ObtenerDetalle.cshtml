@@ -2,12 +2,12 @@
 
             <div  class="border  m-1 rounded p-1">
                 <p>Id: @Model.IdPresupuesto </p>
-                <p>Nombre Destinatario: @Model.NombreDestinatario </p>
-                <p>Fecha Creacion: @Model.FechaCreacion </p>
+                <p>ClienteId: @Model.Cliente.ClienteId </p>
+                <p>Fecha Creacion: @Model.FechaCreacion.ToString("dd/MM/yyyy") </p>
                 
                 <form asp-controller="Presupuestos" asp-action="AddProductoForm">
                     <input type="hidden" name="IdPresupuesto" value="@Model.IdPresupuesto" />
-                    <input type="hidden" name="NombreDestinatario" value="@Model.NombreDestinatario" />
+                    <input type="hidden" name="ClienteId" value="@Model.Cliente.ClienteId" />
                     <input type="hidden" name="FechaCreacion" value="@Model.FechaCreacion.Date" />
                     <input class="btn btn-success" type="submit" value="Añadir Producto"></input>
                 </form>
