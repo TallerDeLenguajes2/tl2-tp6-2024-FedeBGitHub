@@ -1,6 +1,6 @@
 @model Producto
 
-<form asp-controller="Producto" asp-action="ModificarProducto">
+<form asp-controller="Producto" asp-action="ModificarProductoPost" method="post">
     <div class="form-group">
         <label asp-for="@Model.IdProducto"></label>
         <input asp-for="@Model.IdProducto" class="form-control" readonly>

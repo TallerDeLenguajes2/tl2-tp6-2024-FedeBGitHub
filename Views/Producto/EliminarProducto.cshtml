@@ -2,16 +2,16 @@
 
 <div class="row align-items-center justify-content-center ">
     <div class="col-6 align-self-center border border-2 rounded p-3" >
-        <h4>Seguro que quieres eliminar el Cliente:</h4>  
+        <h4>Seguro que quieres eliminar el Producto:</h4>  
         <p>IdProducto: @Model.IdProducto</p>
         <p>Descripcion: @Model.Descripcion</p> 
         <p>Precio: @Model.Precio</p>
         <div class="d-flex justify-content-center align-items-center">
-            <form class="m-1 text-center" asp-controller="Producto" asp-action="EliminarProducto" method="post">
+            <form class="m-1 text-center" asp-controller="Producto" asp-action="EliminarProductoPost" method="post">
                 <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
                 <input class="btn btn-danger" type="submit" value="Eliminar"></input>
             </form>
-            <form class=" text-center" asp-controller="Producto" asp-action="Listar" method="get">
+            <form class=" text-center" asp-controller="Producto" asp-action="ListarProducto" method="get">
                 <input class="btn btn-info" type="submit" value="Cancelar"></input>
             </form>
         </div>

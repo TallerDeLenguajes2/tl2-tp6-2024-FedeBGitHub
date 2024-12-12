@@ -23,7 +23,7 @@
                 <td> @p.Descripcion</td>
                 <td> @p.Precio.ToString("C")</td>
                 <td>
-                    <form asp-controller="Producto" asp-action="ModificarProductoFormulario" method="get">
+                    <form asp-controller="Producto" asp-action="ModificarProducto" method="get">
                         <input type="hidden" name="IdProducto" value="@p.IdProducto" />
                         <input type="hidden" name="Descripcion" value="@p.Descripcion" />
                         <input type="hidden" name="Precio" value="@p.Precio" />
@@ -31,7 +31,7 @@
                     </form>
                 </td>
                 <td>
-                    <form asp-controller="Producto" asp-action="EliminarConfirmacion" method="get">
+                    <form asp-controller="Producto" asp-action="EliminarProducto" method="get">
                         <input type="hidden" name="IdProducto" value="@p.IdProducto" />
                         <input type="hidden" name="Descripcion" value="@p.Descripcion" />
                         <input type="hidden" name="Precio" value="@p.Precio" />

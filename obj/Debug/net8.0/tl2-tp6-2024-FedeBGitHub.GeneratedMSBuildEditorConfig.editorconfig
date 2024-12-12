@@ -42,44 +42,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/AddProductoForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXEFkZFByb2R1Y3RvRm9ybS5jc2h0bWw=
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/AgregarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXEFncmVnYXJQcm9kdWN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/CrearPresupuestoFormulario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXENyZWFyUHJlc3VwdWVzdG9Gb3JtdWxhcmlvLmNzaHRtbA==
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/CrearPresupuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXENyZWFyUHJlc3VwdWVzdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/EliminarPresupuestoPag.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXEVsaW1pbmFyUHJlc3VwdWVzdG9QYWcuY3NodG1s
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/DetallePresupuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXERldGFsbGVQcmVzdXB1ZXN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/Listar_Presupuesto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXExpc3Rhcl9QcmVzdXB1ZXN0by5jc2h0bWw=
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/EliminarPresupuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXEVsaW1pbmFyUHJlc3VwdWVzdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/ModificarPresupuestoForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXE1vZGlmaWNhclByZXN1cHVlc3RvRm9ybS5jc2h0bWw=
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/ListarPresupuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXExpc3RhclByZXN1cHVlc3RvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/ObtenerDetalle.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXE9idGVuZXJEZXRhbGxlLmNzaHRtbA==
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Presupuestos/ModificarPresupuesto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9zXE1vZGlmaWNhclByZXN1cHVlc3RvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/CrearProducto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cQ3JlYXJQcm9kdWN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/EliminarConfirmacion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWxpbWluYXJDb25maXJtYWNpb24uY3NodG1s
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/EliminarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWxpbWluYXJQcm9kdWN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/Listar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cTGlzdGFyLmNzaHRtbA==
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/ListarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cTGlzdGFyUHJvZHVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/ModificarProductoFormulario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cTW9kaWZpY2FyUHJvZHVjdG9Gb3JtdWxhcmlvLmNzaHRtbA==
+[d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Producto/ModificarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cTW9kaWZpY2FyUHJvZHVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [d:/FedeO/2024/2do Cuatrimestre/TallerDeLenguajesII/2doParcial/tl2-tp6-2024-FedeBGitHub/Views/Shared/Error.cshtml]

@@ -13,7 +13,7 @@ public class PresupuestoDetalle
         this.producto = producto;
         this.cantidad = cantidad;
     }
-    void cargarProducto(Producto p)
+    public void cargarProducto(Producto p)
     {
         this.producto = p;
     }

@@ -10,8 +10,8 @@ namespace tl2_tp6_2024_FedeBGitHub.Controllers;
 public class PresupuestosController : Controller
 {
     private  PresupuestosRepository presupuestoRepository;
-    private ProductoRepository productoRepository;
-    private  ClienteRepository clienteRepository;
+    private IProductoRepository productoRepository;
+    private  IClienteRepository clienteRepository;
     private readonly ILogger<ProductoController> _logger;
 
     public PresupuestosController(ILogger<ProductoController> logger)
@@ -22,9 +22,10 @@ public class PresupuestosController : Controller
         _logger = logger;
     }
 
-    
+
+
     [HttpGet]
-    public IActionResult Listar_Presupuesto()
+    public IActionResult ListarPresupuesto()
     {
         List<Presupuesto> listaPresupuestos = presupuestoRepository.ObtenerPresupuestos();
         foreach (Presupuesto p in listaPresupuestos)
@@ -34,76 +35,90 @@ public class PresupuestosController : Controller
         return View(listaPresupuestos);
     }
 
+
     
-    [HttpPost]
-    public IActionResult ObtenerDetalle(int id, int ClienteId)
+    [HttpGet]
+    public IActionResult DetallePresupuesto(int id, int ClienteId)
     {
         
         Presupuesto presupuesto = presupuestoRepository.ObtenerDetalle(id);
         return View(presupuesto);
     }
 
-    [HttpPost]
-    public IActionResult CrearPresupuestoFormulario()
+
+
+    [HttpGet]
+    public IActionResult CrearPresupuesto()
     {
         PresupuestoViewModel presupuestoViewModel = new PresupuestoViewModel();
         presupuestoViewModel.listaClientes = clienteRepository.listarClientes();
         return View(presupuestoViewModel);
     }
 
+
+
     [HttpPost]
-    public IActionResult CrearPresupuesto(int ClienteSeleccionado, Presupuesto presupuesto)
+    public IActionResult CrearPresupuestoPost(int ClienteSeleccionado, Presupuesto presupuesto)
     {
         presupuesto.Cliente = clienteRepository.obtenerCliente(ClienteSeleccionado);
         presupuestoRepository.CrearPresupuesto(presupuesto);
-        return RedirectToAction("Listar_Presupuesto");
+        return RedirectToAction("ListarPresupuesto");
     }
 
+
     
-    [HttpPost]
-    public IActionResult ModificarPresupuestoForm(int ClienteId, Presupuesto presupuesto)
+    [HttpGet]
+    public IActionResult ModificarPresupuesto(int ClienteId, Presupuesto presupuesto)
     {
         presupuesto.Cliente = new Cliente(); // debo cambiar esto que el constructor de presupuesto inicialice el cliente
         presupuesto.Cliente.ClienteId = ClienteId; // no se si conviene eso o hacer que traiga el Cliente completo con el metodo del repositorio
         return View(presupuesto);
     }
 
+
+
     [HttpPost]
-    public IActionResult ModificarPresupuesto(Presupuesto presupuesto)
+    public IActionResult ModificarPresupuestoPost(Presupuesto presupuesto)
     {
         presupuestoRepository.modificarPresupuesto(presupuesto);
-        return RedirectToAction("Listar_Presupuesto");
+        return RedirectToAction("ListarPresupuesto");
     }
 
     
+
     [HttpPost]
-    public IActionResult EliminarPresupuestoPag(int ClienteId, Presupuesto presupuesto)
+    public IActionResult EliminarPresupuesto(int ClienteId, Presupuesto presupuesto)
     {
         presupuesto.Cliente = new Cliente();
         presupuesto.Cliente.ClienteId = ClienteId;
         return View(presupuesto);
     }
 
-    [HttpPost]
-    public IActionResult EliminarPresupuesto(int IdPresupuesto)
-    {
-        presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
-        return RedirectToAction("Listar_Presupuesto");
-    }
+
 
     [HttpPost]
-    public IActionResult AddProductoForm(ProductosYpresupuestoViewModel vm)
+    public IActionResult EliminarPresupuestoPost(int IdPresupuesto)
+    {
+        presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
+        return RedirectToAction("ListarPresupuesto");
+    }
+
+
+
+    [HttpGet]
+    public IActionResult AgregarProducto(ProductosYpresupuestoViewModel vm)
     {
         vm.listaProductos = productoRepository.listarProductos();
         return View(vm);
     }
 
     
+
     [HttpPost]
-    public IActionResult AddProducto(ProductosYpresupuestoViewModel vm)
+    public IActionResult AgregarProductoPost(ProductosYpresupuestoViewModel vm)
     {
         presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
-        return RedirectToAction("Listar_Presupuesto");
+        return RedirectToAction("ListarPresupuesto");
     }
 
 

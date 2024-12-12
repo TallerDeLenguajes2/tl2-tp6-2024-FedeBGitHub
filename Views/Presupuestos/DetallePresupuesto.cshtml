@@ -5,7 +5,7 @@
                 <p>ClienteId: @Model.Cliente.ClienteId </p>
                 <p>Fecha Creacion: @Model.FechaCreacion.ToString("dd/MM/yyyy") </p>
                 
-                <form asp-controller="Presupuestos" asp-action="AddProductoForm">
+                <form asp-controller="Presupuestos" asp-action="AgregarProducto" method="get">
                     <input type="hidden" name="IdPresupuesto" value="@Model.IdPresupuesto" />
                     <input type="hidden" name="ClienteId" value="@Model.Cliente.ClienteId" />
                     <input type="hidden" name="FechaCreacion" value="@Model.FechaCreacion.Date" />

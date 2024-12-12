@@ -19,7 +19,7 @@ public class ProductoController : Controller
     }
 
     [HttpGet]
-    public IActionResult Listar()
+    public IActionResult ListarProducto()
     {
         List<Producto> listaProductos = _productoRepository.listarProductos();
         return View(listaProductos);
@@ -32,36 +32,42 @@ public class ProductoController : Controller
         return View(new Producto());
     }
 
+
     [HttpPost]
-    public IActionResult CrearProducto(Producto Producto)
+    public IActionResult CrearProductoPost(Producto Producto)
     {
         _productoRepository.CrearProducto(Producto);
-        return RedirectToAction("Listar");
+        return RedirectToAction("ListarProducto");
     }
 
+
     [HttpGet]
-    public IActionResult ModificarProductoFormulario(Producto producto)
+    public IActionResult ModificarProducto(Producto producto)
     {
         return View(new Producto());
     }
+
+
     [HttpPost]
-    public IActionResult ModificarProducto(Producto Producto)
+    public IActionResult ModificarProductoPost(Producto Producto)
     {
         _productoRepository.modificarProducto( Producto.IdProducto, Producto);
-        return RedirectToAction("Listar");
+        return RedirectToAction("ListarProducto");
     }
 
+
     [HttpGet]
-    public IActionResult EliminarConfirmacion(Producto producto)
+    public IActionResult EliminarProducto(Producto producto)
     {
         return View(producto);
     }
 
+
     [HttpPost]
-    public IActionResult EliminarProducto(int IdProducto)
+    public IActionResult EliminarProductoPost(int IdProducto)
     {
         _productoRepository.EliminarProducto(IdProducto);
-        return RedirectToAction("Listar");
+        return RedirectToAction("ListarProducto");
     }
     
 }

@@ -1,6 +1,6 @@
 @model List<Presupuesto>
 
-        <form asp-controller="Presupuestos" asp-action="CrearPresupuestoFormulario">
+        <form asp-controller="Presupuestos" asp-action="CrearPresupuesto" method="get">
                     <input class="btn btn-success" type="submit" value="Crear Presupuesto"></input>
         </form>
 
@@ -24,14 +24,14 @@
                 <td> @p.Cliente.ClienteId</td>
                 <td> @p.FechaCreacion.ToString("dd/MM/yyyy")</td>
                 <td>
-                    <form asp-controller="Presupuestos" asp-action="ObtenerDetalle">
+                    <form asp-controller="Presupuestos" asp-action="DetallePresupuesto" method="get">
                     <input hidden name="id" value="@p.IdPresupuesto">
                     <input hidden name="ClienteId" value="@p.Cliente.ClienteId">
                     <input class="btn btn-primary" type="submit" value="Ver más"></input>
                     </form>
                 </td>
                 <td>
-                    <form asp-controller="Presupuestos" asp-action="ModificarPresupuestoForm">
+                    <form asp-controller="Presupuestos" asp-action="ModificarPresupuesto" method="get">
                         <input type="hidden" name="IdPresupuesto" value="@p.IdPresupuesto" />
                         <input type="hidden" name="ClienteId" value="@p.Cliente.ClienteId" />
                         <input type="hidden" name="FechaCreacion" value="@p.FechaCreacion.Date" />
@@ -39,7 +39,7 @@
                     </form>
                 </td>
                 <td>
-                    <form asp-controller="Presupuestos" asp-action="EliminarPresupuestoPag">
+                    <form asp-controller="Presupuestos" asp-action="EliminarPresupuesto" method="get">
                     <input type="hidden" name="IdPresupuesto" value="@p.IdPresupuesto" />
                     <input type="hidden" name="ClienteId" value="@p.Cliente.ClienteId" />
                     <input type="hidden" name="FechaCreacion" value="@p.FechaCreacion.Date" />
