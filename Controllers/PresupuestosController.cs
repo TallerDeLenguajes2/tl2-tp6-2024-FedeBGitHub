@@ -9,14 +9,14 @@ namespace tl2_tp6_2024_FedeBGitHub.Controllers;
 
 public class PresupuestosController : Controller
 {
-    private  PresupuestosRepository presupuestoRepository;
+    private  IPresupuestosRepository _presupuestoRepository;
     private IProductoRepository productoRepository;
     private  IClienteRepository clienteRepository;
     private readonly ILogger<ProductoController> _logger;
 
     public PresupuestosController(ILogger<ProductoController> logger)
     {
-        presupuestoRepository = new PresupuestosRepository();
+        _presupuestoRepository = new PresupuestosRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         clienteRepository = new ClienteRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         productoRepository = new ProductoRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         _logger = logger;
@@ -27,7 +27,7 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult ListarPresupuesto()
     {
-        List<Presupuesto> listaPresupuestos = presupuestoRepository.ObtenerPresupuestos();
+        List<Presupuesto> listaPresupuestos = _presupuestoRepository.ObtenerPresupuestos();
         foreach (Presupuesto p in listaPresupuestos)
         {
             p.Cliente = clienteRepository.obtenerCliente(p.Cliente.ClienteId);
@@ -41,7 +41,7 @@ public class PresupuestosController : Controller
     public IActionResult DetallePresupuesto(int id, int ClienteId)
     {
         
-        Presupuesto presupuesto = presupuestoRepository.ObtenerDetalle(id);
+        Presupuesto presupuesto = _presupuestoRepository.ObtenerDetalle(id);
         return View(presupuesto);
     }
 
@@ -61,7 +61,7 @@ public class PresupuestosController : Controller
     public IActionResult CrearPresupuestoPost(int ClienteSeleccionado, Presupuesto presupuesto)
     {
         presupuesto.Cliente = clienteRepository.obtenerCliente(ClienteSeleccionado);
-        presupuestoRepository.CrearPresupuesto(presupuesto);
+        _presupuestoRepository.CrearPresupuesto(presupuesto);
         return RedirectToAction("ListarPresupuesto");
     }
 
@@ -80,13 +80,13 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult ModificarPresupuestoPost(Presupuesto presupuesto)
     {
-        presupuestoRepository.modificarPresupuesto(presupuesto);
+        _presupuestoRepository.modificarPresupuesto(presupuesto);
         return RedirectToAction("ListarPresupuesto");
     }
 
     
 
-    [HttpPost]
+    [HttpGet]
     public IActionResult EliminarPresupuesto(int ClienteId, Presupuesto presupuesto)
     {
         presupuesto.Cliente = new Cliente();
@@ -99,7 +99,7 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult EliminarPresupuestoPost(int IdPresupuesto)
     {
-        presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
+        _presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
         return RedirectToAction("ListarPresupuesto");
     }
 
@@ -117,7 +117,7 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult AgregarProductoPost(ProductosYpresupuestoViewModel vm)
     {
-        presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
+        _presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
         return RedirectToAction("ListarPresupuesto");
     }
 

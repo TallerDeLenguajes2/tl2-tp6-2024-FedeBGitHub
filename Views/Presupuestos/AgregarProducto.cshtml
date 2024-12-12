@@ -23,7 +23,7 @@
             <td>@p.Descripcion</td>
             <td>@p.Precio</td>
             <td>
-                <form asp-controller="Presupuestos" asp-action="AgregarProducto" method="post">
+                <form asp-controller="Presupuestos" asp-action="AgregarProductoPost" method="post">
                     <input type="hidden" name="IdPresupuesto" value="@Model.IdPresupuesto"/>
                     <input type="hidden" name="IdProducto" value="@p.IdProducto"/>
                     <label asp-for="@Model.Cantidad"></label>
