@@ -7,7 +7,7 @@ namespace repositorys;
 public class PresupuestosRepository
 {
     const string cadenaConexion = @"Data Source=db/Tienda.db;Cache=Shared";
-
+    IProductoRepository productoRepository = new ProductoRepository(@"Data Source=db/Tienda.db;Cache=Shared");
     public void CrearPresupuesto(Presupuesto presupuesto)
     {
         using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
@@ -52,6 +52,8 @@ public class PresupuestosRepository
     }
 
 
+
+    //aqui lo uso
     public Presupuesto ObtenerDetalle(int idBuscado)
     {
         // Traigo un presupuesto donde su idPresupuesto=idBuscado
@@ -78,7 +80,7 @@ public class PresupuestosRepository
             connection.Close();
         }
         // Traigo todos los detalles asociados al idPresupuesto que use arriba
-        ProductoRepository repoPro = new ProductoRepository();
+
         
         using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
         {
@@ -94,21 +96,22 @@ public class PresupuestosRepository
                     //int idPresupuesto = Convert.ToInt32(reader["idPresupuesto"]);
                     int idProd = Convert.ToInt32(reader["idProducto"]);
                     int cantidad = Convert.ToInt32(reader["Cantidad"]);
-                    presupuesto.Detalle.Add(new PresupuestoDetalle(repoPro.productoPorId(idProd),cantidad));
+                    presupuesto.Detalle.Add(new PresupuestoDetalle(productoRepository.productoPorId(idProd),cantidad));
                 }
             }
             connection.Close();
         }
-
         return presupuesto;
     }
 
 
+
+    // aqui lo uso
     public Presupuesto agregarDetalle(int idPresupuesto, int idProducto, int cantidad)
     {
         Presupuesto presupuesto = ObtenerDetalle(idPresupuesto);
-        ProductoRepository repoPro = new ProductoRepository();
-        Producto producto = repoPro.productoPorId(idProducto);
+        
+        Producto producto = productoRepository.productoPorId(idProducto);
         if(presupuesto != null && producto!= null)
         {
             presupuesto.Detalle.Add(new PresupuestoDetalle(producto,cantidad));
@@ -131,6 +134,8 @@ public class PresupuestosRepository
         return presupuesto;
     }
 
+
+
     public void modificarPresupuesto(Presupuesto presupuesto)
     {
         using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
@@ -145,6 +150,9 @@ public class PresupuestosRepository
             connection.Close();
         }
     }
+
+
+
     public void EliminarPresupuesto(int idPresupuesto)
     {
         using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
@@ -157,5 +165,7 @@ public class PresupuestosRepository
             connection.Close();
         }
     } 
+
+
 }
 

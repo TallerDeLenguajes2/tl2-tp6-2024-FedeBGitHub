@@ -10,6 +10,7 @@ namespace tl2_tp6_2024_FedeBGitHub.Controllers;
 public class PresupuestosController : Controller
 {
     private  PresupuestosRepository presupuestoRepository;
+    private ProductoRepository productoRepository;
     private  ClienteRepository clienteRepository;
     private readonly ILogger<ProductoController> _logger;
 
@@ -17,6 +18,7 @@ public class PresupuestosController : Controller
     {
         presupuestoRepository = new PresupuestosRepository();
         clienteRepository = new ClienteRepository(@"Data Source=db/Tienda.db;Cache=Shared");
+        productoRepository = new ProductoRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         _logger = logger;
     }
 
@@ -92,7 +94,6 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult AddProductoForm(ProductosYpresupuestoViewModel vm)
     {
-        ProductoRepository productoRepository = new ProductoRepository();
         vm.listaProductos = productoRepository.listarProductos();
         return View(vm);
     }

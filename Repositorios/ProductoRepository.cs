@@ -2,19 +2,18 @@ using  Microsoft.Data.Sqlite;
 
 namespace repositorys;
 
-public class ProductoRepository
+public class ProductoRepository : IProductoRepository
 {
-    const string cadenaConexion = @"Data Source=db/Tienda.db;Cache=Shared"; // si le borro el Cache=Shared funca igual
-    /*
-    ● Crear un nuevo Producto. (recibe un objeto Producto) --- listo
-    ● Modificar un Producto existente. (recibe un Id y un objeto Producto)
-    ● Listar todos los Productos registrados. (devuelve un List de Producto) --- listo
-    ● Obtener detalles de un Productos por su ID. (recibe un Id y devuelve un Producto)
-    ● Eliminar un Producto por ID
-    */
+    private readonly string _cadenaConexion; // si le borro el Cache=Shared funca igual
+
+    public ProductoRepository(string cadenaConexion)
+    {
+        _cadenaConexion = cadenaConexion;
+    }
+
     public void CrearProducto(Producto producto)
     {
-        using ( SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using ( SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "INSERT INTO Productos (Descripcion, Precio) VALUES (@Descripcion, @Precio)";
             connection.Open();
@@ -26,9 +25,11 @@ public class ProductoRepository
         }
     }
 
+
+
     public void modificarProducto(int id, Producto prod)
     {
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "UPDATE Productos SET Descripcion = @Descripcion, Precio = @Precio WHERE idProducto = @idProd;";
             connection.Open();
@@ -41,10 +42,12 @@ public class ProductoRepository
         }
     }
 
+
+
     public List<Producto> listarProductos()
     {
         List<Producto> LProductos = new List<Producto>();
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "SELECT * FROM Productos";
             connection.Open();
@@ -66,10 +69,12 @@ public class ProductoRepository
         return LProductos;
     }
 
+
+
     public Producto productoPorId(int idBuscado)
     {
         Producto p = null;
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "SELECT * FROM Productos WHERE idProducto = @id";
             connection.Open();
@@ -77,7 +82,6 @@ public class ProductoRepository
             command.Parameters.Add(new SqliteParameter("@id",idBuscado));
             using (SqliteDataReader reader = command.ExecuteReader())
             {
-
                 while (reader.Read())
                 {
                     int id = Convert.ToInt32(reader["idProducto"]);
@@ -92,9 +96,11 @@ public class ProductoRepository
         return p;
     }
 
+
+
     public void EliminarProducto(int idProducto)
     {
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "DELETE FROM Productos WHERE idProducto = @idProducto;";
             connection.Open();

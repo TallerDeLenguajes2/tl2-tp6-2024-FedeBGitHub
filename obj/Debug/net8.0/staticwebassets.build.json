@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XmMBoNAPDhOpGz270U7kmN9GVFcjNFhYliQLAKyZDfc=",
+  "Hash": "xWvHKtG10IaVa/IM+mN4GcNPOMkZtZFtVqqzGF3TGxQ=",
   "Source": "tl2-tp6-2024-FedeBGitHub",
   "BasePath": "_content/tl2-tp6-2024-FedeBGitHub",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\bundle\\tl2-tp6-2024-FedeBGitHub.styles.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\bundle\\tl2-tp6-2024-FedeBGitHub.styles.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/tl2-tp6-2024-FedeBGitHub",
       "RelativePath": "tl2-tp6-2024-FedeBGitHub.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\bundle\\tl2-tp6-2024-FedeBGitHub.styles.css"
+      "OriginalItemSpec": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\bundle\\tl2-tp6-2024-FedeBGitHub.styles.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\tl2-tp6-2024-FedeBGitHub.bundle.scp.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\tl2-tp6-2024-FedeBGitHub.bundle.scp.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/tl2-tp6-2024-FedeBGitHub",
       "RelativePath": "tl2-tp6-2024-FedeBGitHub.bundle.scp.css",
       "AssetKind": "All",
@@ -52,10 +52,10 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\tl2-tp6-2024-FedeBGitHub.bundle.scp.css"
+      "OriginalItemSpec": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\tl2-tp6-2024-FedeBGitHub.bundle.scp.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\css\\site.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\css\\site.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -74,7 +74,7 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\favicon.ico",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\favicon.ico",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -93,7 +93,7 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\js\\site.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\js\\site.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -112,7 +112,7 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -131,7 +131,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -150,7 +150,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -169,7 +169,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -188,7 +188,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -207,7 +207,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -226,7 +226,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -245,7 +245,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -264,7 +264,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -283,7 +283,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -302,7 +302,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -321,7 +321,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -340,7 +340,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -359,7 +359,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -378,7 +378,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -397,7 +397,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -416,7 +416,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -435,7 +435,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -454,7 +454,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -473,7 +473,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -492,7 +492,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -511,7 +511,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -530,7 +530,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -549,7 +549,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -568,7 +568,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -587,7 +587,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -606,7 +606,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -625,7 +625,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -644,7 +644,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -663,7 +663,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -682,7 +682,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -701,7 +701,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -720,7 +720,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -739,7 +739,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -758,7 +758,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -777,7 +777,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -796,7 +796,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -815,7 +815,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -834,7 +834,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -853,7 +853,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -872,7 +872,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -891,7 +891,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -910,7 +910,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -929,7 +929,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -948,7 +948,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -967,7 +967,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -986,7 +986,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1005,7 +1005,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1024,7 +1024,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1043,7 +1043,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1062,7 +1062,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1081,7 +1081,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1100,7 +1100,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1119,7 +1119,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1138,7 +1138,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1157,7 +1157,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",
@@ -1176,7 +1176,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "d:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "tl2-tp6-2024-FedeBGitHub",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\FedeO\\2024\\2do Cuatrimestre\\TallerDeLenguajesII\\2doParcial\\tl2-tp6-2024-FedeBGitHub\\wwwroot\\",

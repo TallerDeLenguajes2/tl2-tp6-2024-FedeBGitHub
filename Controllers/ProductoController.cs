@@ -9,19 +9,19 @@ namespace tl2_tp6_2024_FedeBGitHub.Controllers;
 
 public class ProductoController : Controller
 {
-    private  ProductoRepository productoRepository;
+    private  IProductoRepository _productoRepository;
     private readonly ILogger<ProductoController> _logger;
 
     public ProductoController(ILogger<ProductoController> logger)
     {
-        productoRepository = new ProductoRepository();
+        _productoRepository = new ProductoRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         _logger = logger;
     }
 
     [HttpGet]
     public IActionResult Listar()
     {
-        List<Producto> listaProductos = productoRepository.listarProductos();
+        List<Producto> listaProductos = _productoRepository.listarProductos();
         return View(listaProductos);
     }
 
@@ -35,7 +35,7 @@ public class ProductoController : Controller
     [HttpPost]
     public IActionResult CrearProducto(Producto Producto)
     {
-        productoRepository.CrearProducto(Producto);
+        _productoRepository.CrearProducto(Producto);
         return RedirectToAction("Listar");
     }
 
@@ -47,7 +47,7 @@ public class ProductoController : Controller
     [HttpPost]
     public IActionResult ModificarProducto(Producto Producto)
     {
-        productoRepository.modificarProducto( Producto.IdProducto, Producto);
+        _productoRepository.modificarProducto( Producto.IdProducto, Producto);
         return RedirectToAction("Listar");
     }
 
@@ -60,7 +60,7 @@ public class ProductoController : Controller
     [HttpPost]
     public IActionResult EliminarProducto(int IdProducto)
     {
-        productoRepository.EliminarProducto(IdProducto);
+        _productoRepository.EliminarProducto(IdProducto);
         return RedirectToAction("Listar");
     }
     
