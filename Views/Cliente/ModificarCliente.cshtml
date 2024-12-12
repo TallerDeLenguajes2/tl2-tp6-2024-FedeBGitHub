@@ -1,6 +1,6 @@
 @model Cliente
 
-<form asp-controller="Cliente" asp-action="ModificarCliente">
+<form asp-controller="Cliente" asp-action="ModificarClientePost" method="post">
     <div class="form-group">
         <label asp-for="@Model.ClienteId"></label>
         <input asp-for="@Model.ClienteId" class="form-control" readonly required/>

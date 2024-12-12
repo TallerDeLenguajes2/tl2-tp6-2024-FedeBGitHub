@@ -16,7 +16,7 @@ public class PresupuestosController : Controller
     public PresupuestosController(ILogger<ProductoController> logger)
     {
         presupuestoRepository = new PresupuestosRepository();
-        clienteRepository = new ClienteRepository();
+        clienteRepository = new ClienteRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         _logger = logger;
     }
 

@@ -3,13 +3,18 @@ using  Microsoft.Data.Sqlite;
 
 namespace repositorys;
 
-public class ClienteRepository
+public class ClienteRepository : IClienteRepository
 {
-    const string cadenaConexion = @"Data Source=db/Tienda.db;Cache=Shared"; // si le borro el Cache=Shared funca igual
+    private string _cadenaConexion;
+
+    public ClienteRepository(string cadenaConexion)
+    {
+        _cadenaConexion = cadenaConexion;
+    }
 
     public void CrearCliente(Cliente cliente)
     {
-        using ( SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using ( SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "INSERT INTO Clientes (Nombre, Email, Telefono) VALUES (@Nombre, @Email, @Telefono)"; 
             // el ClienteId no por que es Auto Incremental
@@ -25,7 +30,7 @@ public class ClienteRepository
 
     public void modificarCliente(Cliente c)
     {
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "UPDATE Clientes SET Nombre = @Nombre, Email = @Email, Telefono = @Telefono WHERE ClienteId = @ClienteId;";
             connection.Open();
@@ -42,7 +47,7 @@ public class ClienteRepository
     public List<Cliente> listarClientes()
     {
         List<Cliente> LClientes = new List<Cliente>();
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "SELECT * FROM Clientes";
             connection.Open();
@@ -65,35 +70,9 @@ public class ClienteRepository
         return LClientes;
     }
 
-    public Producto productoPorId(int idBuscado)
-    {
-        Producto p = null;
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
-        {
-            string query = "SELECT * FROM Productos WHERE idProducto = @id";
-            connection.Open();
-            SqliteCommand command = new SqliteCommand(query, connection);
-            command.Parameters.Add(new SqliteParameter("@id",idBuscado));
-            using (SqliteDataReader reader = command.ExecuteReader())
-            {
-
-                while (reader.Read())
-                {
-                    int id = Convert.ToInt32(reader["idProducto"]);
-                    string descripcion = Convert.ToString(reader["Descripcion"]);
-                    int precio;
-                    int.TryParse(reader["Precio"].ToString(), out precio); //otra forma de conversion de datos usando TryParse funciona tambien para float y es lo que usaba en TallerI
-                    p = new Producto (id,descripcion,precio);
-                }
-            }
-            connection.Close();
-        }
-        return p;
-    }
-
     public void EliminarCliente(int id)
     {
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "DELETE FROM Clientes WHERE ClienteId = @ClienteId;";
             connection.Open();
@@ -107,7 +86,7 @@ public class ClienteRepository
     public Cliente obtenerCliente(int id)
     {
         Cliente c = null;
-        using (SqliteConnection connection = new SqliteConnection(cadenaConexion))
+        using (SqliteConnection connection = new SqliteConnection(_cadenaConexion))
         {
             string query = "SELECT * FROM Clientes WHERE ClienteId = @id";
             connection.Open();

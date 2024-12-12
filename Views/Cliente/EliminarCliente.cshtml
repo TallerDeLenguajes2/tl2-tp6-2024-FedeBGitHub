@@ -8,7 +8,7 @@
         <p>Email: @Model.Email</p>
         <p>Telefono: @Model.Email</p>
         <div class="d-flex justify-content-center align-items-center">
-            <form class="m-1 text-center" asp-controller="Cliente" asp-action="EliminarCliente" method="post">
+            <form class="m-1 text-center" asp-controller="Cliente" asp-action="EliminarClientePost" method="post">
                 <input type="hidden" name="ClienteId" value="@Model.ClienteId" />
                 <input class="btn btn-danger" type="submit" value="Eliminar"></input>
             </form>

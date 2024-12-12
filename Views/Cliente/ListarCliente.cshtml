@@ -1,6 +1,6 @@
 @model List<Cliente>
 
-        <form asp-controller="Cliente" asp-action="CrearClienteFormulario" method="get">
+        <form asp-controller="Cliente" asp-action="CrearCliente" method="get">
             <input class="btn btn-success" type="submit" value="Crear Cliente"></input>
         </form>
 
@@ -25,7 +25,7 @@
                 <td> @c.Email</td>
                 <td> @c.Telefono</td>
                 <td>
-                    <form asp-controller="Cliente" asp-action="ModificarClienteFormulario" method="get">
+                    <form asp-controller="Cliente" asp-action="ModificarCliente" method="get">
                         <input type="hidden" name="ClienteId" value="@c.ClienteId" />
                         <input type="hidden" name="Nombre" value="@c.Nombre" />
                         <input type="hidden" name="Email" value="@c.Email" />
@@ -34,7 +34,7 @@
                     </form>
                 </td>
                 <td>
-                    <form asp-controller="Cliente" asp-action="EliminarConfirmacion" method="get">
+                    <form asp-controller="Cliente" asp-action="EliminarCliente" method="get">
                         <input type="hidden" name="ClienteId" value="@c.ClienteId" />
                         <input type="hidden" name="Nombre" value="@c.Nombre" />
                         <input type="hidden" name="Email" value="@c.Email" />

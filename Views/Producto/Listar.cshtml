@@ -21,7 +21,7 @@
             <tr>
                 <th> @p.IdProducto</th>
                 <td> @p.Descripcion</td>
-                <td> @p.Precio</td>
+                <td> @p.Precio.ToString("C")</td>
                 <td>
                     <form asp-controller="Producto" asp-action="ModificarProductoFormulario" method="get">
                         <input type="hidden" name="IdProducto" value="@p.IdProducto" />

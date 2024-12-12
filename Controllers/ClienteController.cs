@@ -9,12 +9,12 @@ namespace tl2_tp6_2024_FedeBGitHub.Controllers;
 
 public class ClienteController : Controller
 {
-    private  ClienteRepository clienteRepository;
+    private readonly IClienteRepository _clienteRepository;
     private readonly ILogger<ClienteController> _logger;
 
     public ClienteController(ILogger<ClienteController> logger)
     {
-        clienteRepository = new ClienteRepository();
+        _clienteRepository = new ClienteRepository(@"Data Source=db/Tienda.db;Cache=Shared");
         _logger = logger;
     }
 
@@ -22,72 +22,46 @@ public class ClienteController : Controller
     [HttpGet]
     public IActionResult ListarCliente()
     {
-        List<Cliente> listaClientes = clienteRepository.listarClientes();
+        List<Cliente> listaClientes = _clienteRepository.listarClientes();
         return View(listaClientes);
     }
 
     [HttpGet]
-    public IActionResult CrearClienteFormulario()
+    public IActionResult CrearCliente()
     {
         return View(new Cliente());
     }
 
     [HttpPost]
-    public IActionResult CrearCliente(Cliente cliente)
+    public IActionResult CrearClientePost(Cliente cliente)
     {
-        clienteRepository.CrearCliente(cliente);
+        _clienteRepository.CrearCliente(cliente);
         return RedirectToAction("ListarCliente");
     }
 
     [HttpGet]
-    public IActionResult ModificarClienteFormulario(Cliente cliente)
-    {
-        return View(cliente);
-    }
-
-    [HttpPost]
     public IActionResult ModificarCliente(Cliente cliente)
     {
-        clienteRepository.modificarCliente(cliente);
+        return View(cliente);
+    }
+
+    [HttpPost]
+    public IActionResult ModificarClientePost(Cliente cliente)
+    {
+        _clienteRepository.modificarCliente(cliente);
         return RedirectToAction("ListarCliente");
     }
 
     [HttpGet]
-    public IActionResult EliminarConfirmacion(Cliente cliente)
+    public IActionResult EliminarCliente(Cliente cliente)
     {
         return View(cliente);
     }
 
     [HttpPost]
-    public IActionResult EliminarCliente(int ClienteId)
+    public IActionResult EliminarClientePost(int ClienteId)
     {
-        clienteRepository.EliminarCliente(ClienteId);
+        _clienteRepository.EliminarCliente(ClienteId);
         return RedirectToAction("ListarCliente");
     }
-    /*
-   
-
-    [HttpPost]
-    public IActionResult AddProductoForm(ProductosYpresupuestoViewModel vm)
-    {
-        ProductoRepository productoRepository = new ProductoRepository();
-        vm.listaProductos = productoRepository.listarProductos();
-        return View(vm);
-    }
-
-    
-    [HttpPost]
-    public IActionResult AddProducto(ProductosYpresupuestoViewModel vm)
-    {
-        presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
-        return RedirectToAction("Listar_Presupuesto");
-    }
-    */
-
-    //asp-for="NombreDestinatario" Genera name, id y value
-
-    /* -------- SON TOTALMENTE EQUIVALENTES
-    <input asp-for="FechaCreacion" class="form-control" type="date" />
-    <input name="FechaCreacion" id="FechaCreacion" class="form-control" type="date" value="@Model.FechaCreacion"/>
-    */
 }
