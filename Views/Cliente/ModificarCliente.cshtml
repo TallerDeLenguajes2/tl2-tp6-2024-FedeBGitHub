@@ -1,22 +1,24 @@
-@model Cliente
+@model ModificarClienteViewModel
 
 <form asp-controller="Cliente" asp-action="ModificarClientePost" method="post">
+    <input type="hidden" name="ClienteId" value="@Model.ClienteId" />
     <div class="form-group">
-        <label asp-for="@Model.ClienteId"></label>
-        <input asp-for="@Model.ClienteId" class="form-control" readonly required/>
-    </div>
-    <div class="form-group">
-        <label asp-for="@Model.Nombre"></label>
-        <input asp-for="@Model.Nombre" class="form-control" required/>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control"/>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="@Model.Email"></label>
-        <input asp-for="@Model.Email" class="form-control" required/>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Telefono"></label>
-        <input asp-for="@Model.Telefono" class="form-control" required/>
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" class="form-control" />
+        <span asp-validation-for="Telefono" class="text-danger"></span>
     </div>
     <input class="btn btn-primary m-1 " type="submit" value="Modificar"></input>
 </form>
+
+@section Scripts{<partial name="_ValidationScriptsPartial"/>}

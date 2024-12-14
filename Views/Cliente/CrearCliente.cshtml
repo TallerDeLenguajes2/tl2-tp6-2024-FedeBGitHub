@@ -1,41 +1,24 @@
-@model Cliente
+@model AltaClienteViewModel
 
 <form asp-controller="Cliente" asp-action="CrearClientePost" method="post">
-    <input hidden asp-for="@Model.ClienteId">
     <div class="form-group">
-        <label asp-for="@Model.Nombre"></label>
-        <input asp-for="@Model.Nombre" class="form-control" required/>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control"/>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="@Model.Email"></label>
-        <input asp-for="@Model.Email" class="form-control" required/>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Telefono"></label>
-        <input asp-for="@Model.Telefono" class="form-control" required/>
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" class="form-control"/>
+        <span asp-validation-for="Telefono" class="text-danger"></span>
     </div>
     <input class="btn btn-primary m-1 " type="submit" value="Registrar"></input>
+    <a asp-action="ListarCliente" class="btn btn-secondary">Cancelar</a>
 </form>
 
-@{
-/*
-<form asp-controller="Cliente" asp-action="CrearCliente" method="post">
-    <div class="form-group">
-        <label id="Nombre">Nombre:</label>
-        <input type="text" name="Nombre" id="Nombre" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label id="Email">Email:</label>
-        <input name="Email" id="Email" placeholder="miemail@gmail.com" type="text" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label id="Telefono">Telefono:</label>
-        <input name="Telefono" id="Telefono" type="text" class="form-control" />
-    </div>
-    <input class="btn btn-primary m-1 " type="submit" value="Registrar"></input>
-</form>
-*/
-}
+@section Scripts{<partial name="_ValidationScriptsPartial"/>}

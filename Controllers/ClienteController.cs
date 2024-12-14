@@ -29,25 +29,35 @@ public class ClienteController : Controller
     [HttpGet]
     public IActionResult CrearCliente()
     {
-        return View(new Cliente());
+        return View(new AltaClienteViewModel());
     }
 
     [HttpPost]
-    public IActionResult CrearClientePost(Cliente cliente)
+    public IActionResult CrearClientePost(AltaClienteViewModel c)
     {
+        if(!ModelState.IsValid)
+        {
+            return RedirectToAction("ListarCliente");
+        }
+        Cliente cliente = new Cliente(c.Nombre,c.Email,c.Telefono);
         _clienteRepository.CrearCliente(cliente);
         return RedirectToAction("ListarCliente");
     }
 
     [HttpGet]
-    public IActionResult ModificarCliente(Cliente cliente)
+    public IActionResult ModificarCliente(ModificarClienteViewModel cliente)
     {
         return View(cliente);
     }
 
     [HttpPost]
-    public IActionResult ModificarClientePost(Cliente cliente)
+    public IActionResult ModificarClientePost(ModificarClienteViewModel c)
     {
+        if(!ModelState.IsValid)
+        {
+            return RedirectToAction("ListarCliente");
+        }
+        Cliente cliente = new Cliente(c.ClienteId,c.Nombre,c.Email,c.Telefono);
         _clienteRepository.modificarCliente(cliente);
         return RedirectToAction("ListarCliente");
     }

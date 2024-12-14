@@ -49,7 +49,7 @@ public class ProductoController : Controller
     [HttpGet]
     public IActionResult ModificarProducto(ModificarProductoViewModel producto)
     {
-        return View();
+        return View(producto);
     }
 
 

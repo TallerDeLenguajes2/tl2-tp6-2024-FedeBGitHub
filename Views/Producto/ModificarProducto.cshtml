@@ -1,6 +1,7 @@
 @model ModificarProductoViewModel
 
 <form asp-controller="Producto" asp-action="ModificarProductoPost" method="post">
+    <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
     <div class="form-group">
         <label asp-for="@Model.Descripcion"></label>
         <input asp-for="@Model.Descripcion" class="form-control"/>
