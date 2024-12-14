@@ -29,29 +29,39 @@ public class ProductoController : Controller
     [HttpGet]
     public IActionResult CrearProducto()
     {
-        return View(new Producto());
+        return View(new AltaProductoViewModel());
     }
 
 
     [HttpPost]
-    public IActionResult CrearProductoPost(Producto Producto)
+    public IActionResult CrearProductoPost(AltaProductoViewModel producto)
     {
-        _productoRepository.CrearProducto(Producto);
-        return RedirectToAction("ListarProducto");
+        if (!ModelState.IsValid)
+        {
+            return RedirectToAction("ListarProducto");
+        }
+        Producto p = new Producto(producto.Descripcion,producto.Precio);
+        _productoRepository.CrearProducto(p);
+        return RedirectToAction("ListarProducto"); 
     }
 
 
     [HttpGet]
-    public IActionResult ModificarProducto(Producto producto)
+    public IActionResult ModificarProducto(ModificarProductoViewModel producto)
     {
-        return View(new Producto());
+        return View();
     }
 
 
     [HttpPost]
-    public IActionResult ModificarProductoPost(Producto Producto)
+    public IActionResult ModificarProductoPost(ModificarProductoViewModel p)
     {
-        _productoRepository.modificarProducto( Producto.IdProducto, Producto);
+         if (!ModelState.IsValid)
+        {
+            return RedirectToAction("ListarProducto");
+        }
+        Producto producto = new Producto(p.IdProducto, p.Descripcion, p.Precio);
+        _productoRepository.modificarProducto( producto.IdProducto, producto);
         return RedirectToAction("ListarProducto");
     }
 

@@ -11,9 +11,7 @@
                 <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
                 <input class="btn btn-danger" type="submit" value="Eliminar"></input>
             </form>
-            <form class=" text-center" asp-controller="Producto" asp-action="ListarProducto" method="get">
-                <input class="btn btn-info" type="submit" value="Cancelar"></input>
-            </form>
+            <a asp-action="ListarProducto" class="btn btn-info">Cancelar</a>
         </div>
         
     </div>

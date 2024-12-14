@@ -18,6 +18,13 @@ public class Producto
         
     }
 
+    //Para ProductoViewModel
+    public Producto(string descripcion, int precio)
+    {
+        this.descripcion = descripcion;
+        this.precio = precio;
+    }
+
     public int Precio { get => precio; set => precio = value;}
     public string Descripcion { get => descripcion; set => descripcion = value;}
     public int IdProducto { get => idProducto; set => idProducto = value;}
