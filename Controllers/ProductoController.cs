@@ -12,9 +12,9 @@ public class ProductoController : Controller
     private  IProductoRepository _productoRepository;
     private readonly ILogger<ProductoController> _logger;
 
-    public ProductoController(ILogger<ProductoController> logger)
+    public ProductoController(ILogger<ProductoController> logger, IProductoRepository productoRepository)
     {
-        _productoRepository = new ProductoRepository(@"Data Source=db/Tienda.db;Cache=Shared");
+        _productoRepository = productoRepository;
         _logger = logger;
     }
 

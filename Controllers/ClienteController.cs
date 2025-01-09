@@ -12,9 +12,9 @@ public class ClienteController : Controller
     private readonly IClienteRepository _clienteRepository;
     private readonly ILogger<ClienteController> _logger;
 
-    public ClienteController(ILogger<ClienteController> logger)
+    public ClienteController(ILogger<ClienteController> logger,IClienteRepository clienteRepository)
     {
-        _clienteRepository = new ClienteRepository(@"Data Source=db/Tienda.db;Cache=Shared");
+        _clienteRepository = clienteRepository;
         _logger = logger;
     }
 

@@ -1,4 +1,16 @@
+using repositorys;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IPresupuestosRepository, PresupuestosRepository>();
+
+//Inyeccion de CadenaDeConexion
+string CadenaDeConexion = builder.Configuration.GetConnectionString("SqliteConexion")!.ToString();
+builder.Services.AddSingleton(CadenaDeConexion);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

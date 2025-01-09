@@ -7,12 +7,13 @@ namespace repositorys;
 public class PresupuestosRepository: IPresupuestosRepository
 {
     private string _cadenaConexion;
-    IProductoRepository productoRepository = new ProductoRepository(@"Data Source=db/Tienda.db;Cache=Shared");
+    IProductoRepository _productoRepository;
 
 
-    public PresupuestosRepository(string cadenaConexion)
+    public PresupuestosRepository(string cadenaConexion, IProductoRepository productoRepository)
     {
         _cadenaConexion = cadenaConexion;
+        _productoRepository = productoRepository;
     }
 
 
@@ -106,7 +107,7 @@ public class PresupuestosRepository: IPresupuestosRepository
                     //int idPresupuesto = Convert.ToInt32(reader["idPresupuesto"]);
                     int idProd = Convert.ToInt32(reader["idProducto"]);
                     int cantidad = Convert.ToInt32(reader["Cantidad"]);
-                    presupuesto.Detalle.Add(new PresupuestoDetalle(productoRepository.productoPorId(idProd),cantidad));
+                    presupuesto.Detalle.Add(new PresupuestoDetalle(_productoRepository.productoPorId(idProd),cantidad));
                 }
             }
             connection.Close();
@@ -121,7 +122,7 @@ public class PresupuestosRepository: IPresupuestosRepository
     {
         Presupuesto presupuesto = ObtenerDetalle(idPresupuesto);
         
-        Producto producto = productoRepository.productoPorId(idProducto);
+        Producto producto = _productoRepository.productoPorId(idProducto);
         if(presupuesto != null && producto!= null)
         {
             presupuesto.Detalle.Add(new PresupuestoDetalle(producto,cantidad));
