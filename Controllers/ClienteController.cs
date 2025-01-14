@@ -22,6 +22,7 @@ public class ClienteController : Controller
     [HttpGet]
     public IActionResult ListarCliente()
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
         List<Cliente> listaClientes = _clienteRepository.listarClientes();
         return View(listaClientes);
     }

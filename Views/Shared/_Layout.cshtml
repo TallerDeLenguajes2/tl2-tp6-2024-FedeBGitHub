@@ -1,4 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    bool isAuthenticated = false;
+    var username = string.Empty;
+    string rol = HttpContextAccessor.HttpContext.Session.GetString("Rol");
+    string admin = Rol.Admin.ToString();
+
+    if (HttpContextAccessor.HttpContext.Session.GetString("IsAuthenticated") == "true")
+    {
+        isAuthenticated = true;
+        username = HttpContextAccessor.HttpContext.Session.GetString("NomUsuario");
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -26,15 +40,41 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @{
+                            if(isAuthenticated == false)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Logeo" asp-action="Index">Iniciar Sesión</a>
+                                </li>
+                            }
+                        }
+                        
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="ListarProducto">Producto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Presupuestos" asp-action="ListarPresupuesto">Presupuestos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ListarCliente">Clientes</a>
-                        </li>
+                        @{
+                            if(rol == admin)
+                            {
+                               <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ListarCliente">Clientes</a>
+                                </li>
+                                
+                            }
+                        }
+                        
+                        @{
+                            if(isAuthenticated == true)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Logeo" asp-action="CerrarSesion">Cerrar Sesión</a>
+                                </li>
+                                
+                            }
+                        }
                     </ul>
                 </div>
             </div>

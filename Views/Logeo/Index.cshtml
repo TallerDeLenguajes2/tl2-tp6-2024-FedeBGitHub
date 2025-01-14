@@ -1,0 +1,22 @@
+@model LogeoViewModel
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
+        <h4 class="card-title text-center mb-4">Iniciar sesión</h4>
+
+        <form asp-controller="Logeo" asp-action="Logeo" method="post">
+            <div class="form-group">
+                <label for="NomUsuario" class="form-label">Usuario:</label>
+                <input type="text" class="form-control" id="NomUsuario" name="NomUsuario" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Contrasenia" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="Contrasenia" name="Contrasenia" required />
+            </div>
+
+            <input class="btn btn-primary m-1" type="submit" value="Iniciar Sesión" />
+        </form>
+
+    </div>
+</div>

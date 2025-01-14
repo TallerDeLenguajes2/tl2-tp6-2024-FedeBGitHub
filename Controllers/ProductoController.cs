@@ -21,6 +21,7 @@ public class ProductoController : Controller
     [HttpGet]
     public IActionResult ListarProducto()
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
         List<Producto> listaProductos = _productoRepository.listarProductos();
         return View(listaProductos);
     }

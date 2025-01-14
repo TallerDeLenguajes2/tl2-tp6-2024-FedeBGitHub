@@ -94,8 +94,6 @@ public class ClienteRepository : IClienteRepository
             command.Parameters.Add(new SqliteParameter("@id",id));
             using (SqliteDataReader reader = command.ExecuteReader())
             {
-
-            
                 while (reader.Read())
                 {
                     c = new Cliente();

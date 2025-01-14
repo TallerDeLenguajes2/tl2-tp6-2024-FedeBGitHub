@@ -27,6 +27,7 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult ListarPresupuesto()
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
         List<Presupuesto> listaPresupuestos = _presupuestoRepository.ObtenerPresupuestos();
         foreach (Presupuesto p in listaPresupuestos)
         {
