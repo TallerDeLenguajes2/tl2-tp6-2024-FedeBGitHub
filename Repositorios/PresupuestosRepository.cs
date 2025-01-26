@@ -26,7 +26,13 @@ public class PresupuestosRepository: IPresupuestosRepository
             SqliteCommand command = new SqliteCommand (query, connection);
             command.Parameters.Add(new SqliteParameter("@clienteId",presupuesto.Cliente.ClienteId));
             command.Parameters.Add(new SqliteParameter("@fecha",presupuesto.FechaCreacion.ToString("yyyy-MM-dd")));
-            command.ExecuteNonQuery();
+           
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se inserto nada
+            {
+                throw new Exception("No se pudo insertar el presupuesto en la base de datos.");
+            }
             connection.Close();
         }
     }
@@ -59,6 +65,12 @@ public class PresupuestosRepository: IPresupuestosRepository
             }
             connection.Close();
         }
+
+        if (p.Count == 0)
+        {
+            throw new Exception("No se encontro presupuestos");
+        }
+
         return p;
     }
 
@@ -157,7 +169,13 @@ public class PresupuestosRepository: IPresupuestosRepository
             command.Parameters.Add(new SqliteParameter("@clienteId",presupuesto.Cliente.ClienteId));
             command.Parameters.Add(new SqliteParameter("@fechCreacion",presupuesto.FechaCreacion));
             command.Parameters.Add(new SqliteParameter("@idPresupuesto",presupuesto.IdPresupuesto));
-            command.ExecuteNonQuery();
+            
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se modificó
+            {
+                throw new Exception("No se pudo modificar el presupuesto en la base de datos.");
+            }
             connection.Close();
         }
     }
@@ -172,7 +190,14 @@ public class PresupuestosRepository: IPresupuestosRepository
             connection.Open();
             SqliteCommand command = new SqliteCommand (query, connection);
             command.Parameters.Add(new SqliteParameter("@idPresupuesto",idPresupuesto));
-            command.ExecuteNonQuery();
+
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se eliminó
+            {
+                throw new Exception("No se pudo eliminar el presupuesto en la base de datos.");
+            }
+
             connection.Close();
         }
     } 

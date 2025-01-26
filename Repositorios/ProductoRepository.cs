@@ -20,7 +20,15 @@ public class ProductoRepository : IProductoRepository
             SqliteCommand command = new SqliteCommand(query, connection);
             command.Parameters.Add(new SqliteParameter("@Descripcion", producto.Descripcion));
             command.Parameters.Add(new SqliteParameter("@Precio", producto.Precio));
-            command.ExecuteNonQuery();
+
+            // Ejecuta la consulta y verifica el número de filas afectadas
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se inserto nada
+            {
+                throw new Exception("No se pudo insertar el producto en la base de datos.");
+            }
+
             connection.Close();
         }
     }
@@ -37,7 +45,15 @@ public class ProductoRepository : IProductoRepository
             command.Parameters.Add(new SqliteParameter("@Descripcion",prod.Descripcion));
             command.Parameters.Add(new SqliteParameter("@Precio",prod.Precio));
             command.Parameters.Add(new SqliteParameter("@idProd",id));
-            command.ExecuteNonQuery();
+
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se modificó
+            {
+                throw new Exception("No se pudo modificar el producto en la base de datos.");
+            }
+
+
             connection.Close();
         }
     }
@@ -66,6 +82,12 @@ public class ProductoRepository : IProductoRepository
             }
             connection.Close();
         }
+
+        if (LProductos.Count == 0)
+        {
+            throw new Exception("No se encontro productos");
+        }
+
         return LProductos;
     }
 
@@ -82,7 +104,7 @@ public class ProductoRepository : IProductoRepository
             command.Parameters.Add(new SqliteParameter("@id",idBuscado));
             using (SqliteDataReader reader = command.ExecuteReader())
             {
-                while (reader.Read())
+                if (reader.Read())
                 {
                     int id = Convert.ToInt32(reader["idProducto"]);
                     string descripcion = Convert.ToString(reader["Descripcion"]);
@@ -93,6 +115,12 @@ public class ProductoRepository : IProductoRepository
             }
             connection.Close();
         }
+
+        if (p == null)
+        {
+            throw new Exception("No se encontro el producto");
+        }
+
         return p;
     }
 
@@ -106,7 +134,14 @@ public class ProductoRepository : IProductoRepository
             connection.Open();
             SqliteCommand command = new SqliteCommand (query, connection);
             command.Parameters.Add(new SqliteParameter("@idProducto",idProducto));
-            command.ExecuteNonQuery();
+
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se eliminó
+            {
+                throw new Exception("No se pudo eliminar el producto en la base de datos.");
+            }
+
             connection.Close();
         }
     } 

@@ -37,6 +37,12 @@ public class UsuarioRepository: IUsuarioRepository
             }
             connection.Close();
         }
+
+        if (usuario == null)
+        {
+            throw new Exception("No se encontro el usuario");
+        }
+
         return usuario;
     }
 
@@ -82,7 +88,15 @@ public class UsuarioRepository: IUsuarioRepository
                 command.Parameters.Add(new SqliteParameter("@usuario", usuario.NomUsuario));
                 command.Parameters.Add(new SqliteParameter("@contra", usuario.Contrasenia));
                 command.Parameters.Add(new SqliteParameter("@rol", (int)usuario.Rol));
-                command.ExecuteNonQuery();
+                
+                // Ejecuta la consulta y verifica el número de filas afectadas
+                int filasAfectadas = command.ExecuteNonQuery();
+
+                if (filasAfectadas == 0) // si no hay filas afectadas es porque no se inserto nada
+                {
+                    throw new Exception("No se pudo insertar el usuario en la base de datos.");
+                }
+
                 connection.Close();
             }
             return true;

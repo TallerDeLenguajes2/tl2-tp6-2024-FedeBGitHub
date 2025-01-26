@@ -65,14 +65,16 @@ public class LogeoController : Controller
                 _logger.LogInformation("El usuario " + user.NomUsuario + " ingresó correctamente");
                 return RedirectToAction("ListarPresupuesto", "Presupuestos");
             }
-            usuario.ErrorMessage = "Credenciales Iválidas";
-            _logger.LogWarning("Intento de acceso invalido - Usuario: " + user.NomUsuario + " 90Clave ingresada: " + user.Contrasenia);
-            return View("Index", usuario); //No la toma una vez llega al warning pasa al catch
+            
+            
+            return View("Index", usuario); //nunca llega aqui
         }
         catch (Exception ex)
         {
+            _logger.LogWarning("Intento de acceso invalido - Usuario: " + usuario.NomUsuario + " | Clave ingresada: " + usuario.Contrasenia);
             _logger.LogError(ex.ToString());
             //return RedirectToAction("Index", usuario); No funca asi
+            usuario.ErrorMessage = "Credenciales Iválidas";
             return View("Index", usuario);
         }
         
