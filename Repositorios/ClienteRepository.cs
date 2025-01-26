@@ -23,7 +23,15 @@ public class ClienteRepository : IClienteRepository
             command.Parameters.Add(new SqliteParameter("@Nombre", cliente.Nombre));
             command.Parameters.Add(new SqliteParameter("@Email", cliente.Email));
             command.Parameters.Add(new SqliteParameter("@Telefono", cliente.Telefono));
-            command.ExecuteNonQuery();
+
+            // Ejecuta la consulta y verifica el número de filas afectadas
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se inserto nada
+            {
+                throw new Exception("No se pudo insertar el cliente en la base de datos.");
+            }
+
             connection.Close();
         }
     }
@@ -39,7 +47,14 @@ public class ClienteRepository : IClienteRepository
             command.Parameters.Add(new SqliteParameter("@Email",c.Email));
             command.Parameters.Add(new SqliteParameter("@Telefono",c.Telefono));
             command.Parameters.Add(new SqliteParameter("@ClienteId",c.ClienteId));
-            command.ExecuteNonQuery();
+            
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se modificó
+            {
+                throw new Exception("No se pudo modificar el cliente en la base de datos.");
+            }
+
             connection.Close();
         }
     }
@@ -67,6 +82,12 @@ public class ClienteRepository : IClienteRepository
             }
             connection.Close();
         }
+
+        if (LClientes.Count == 0)
+        {
+            throw new Exception("No se encontro clientes");
+        }
+
         return LClientes;
     }
 
@@ -78,7 +99,13 @@ public class ClienteRepository : IClienteRepository
             connection.Open();
             SqliteCommand command = new SqliteCommand (query, connection);
             command.Parameters.Add(new SqliteParameter("@ClienteId",id));
-            command.ExecuteNonQuery();
+           
+            int filasAfectadas = command.ExecuteNonQuery();
+
+            if (filasAfectadas == 0) // si no hay filas afectadas es porque no se eliminó
+            {
+                throw new Exception("No se pudo eliminar el cliente en la base de datos.");
+            }
             connection.Close();
         }
     } 
@@ -105,6 +132,12 @@ public class ClienteRepository : IClienteRepository
             }
             connection.Close();
         }
+
+        if (c == null)
+        {
+            throw new Exception("No se encontro el cliente");
+        }
+
         return c;
     }
 }

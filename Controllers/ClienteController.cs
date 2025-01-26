@@ -22,57 +22,152 @@ public class ClienteController : Controller
     [HttpGet]
     public IActionResult ListarCliente()
     {
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
-        List<Cliente> listaClientes = _clienteRepository.listarClientes();
-        return View(listaClientes);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
+            if (HttpContext.Session.GetString("Rol") == Rol.Admin.ToString())
+            {
+                List<Cliente> listaClientes = _clienteRepository.listarClientes();
+                return View(listaClientes);
+            }else{
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }
+            
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo cargar la lista de clientes";
+            return View(new List<Cliente>());
+        }
+        
     }
 
     [HttpGet]
     public IActionResult CrearCliente()
     {
-        return View(new AltaClienteViewModel());
+        try
+        {
+            if (HttpContext.Session.GetString("IsAuthenticated") != null &&
+                HttpContext.Session.GetString("Rol") == Rol.Admin.ToString())
+            {
+                return View(new AltaClienteViewModel());
+            }else{
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo cargar el formulario para agregar clientes";
+            return View("ListarCliente", new List<Cliente>());
+        }
     }
 
     [HttpPost]
     public IActionResult CrearClientePost(AltaClienteViewModel c)
     {
-        if(!ModelState.IsValid)
+        try
         {
+            if(!ModelState.IsValid)
+            {
+                return RedirectToAction("ListarCliente");
+            }
+            Cliente cliente = new Cliente(c.Nombre,c.Email,c.Telefono);
+            _clienteRepository.CrearCliente(cliente);
             return RedirectToAction("ListarCliente");
         }
-        Cliente cliente = new Cliente(c.Nombre,c.Email,c.Telefono);
-        _clienteRepository.CrearCliente(cliente);
-        return RedirectToAction("ListarCliente");
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo agregar cliente";
+            return View("ListarCliente", new List<Cliente>());
+        }
     }
 
     [HttpGet]
     public IActionResult ModificarCliente(ModificarClienteViewModel cliente)
     {
-        return View(cliente);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) 
+            {
+                return RedirectToAction("Index", "Logeo");
+            } 
+
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString())
+            {
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }
+            return View(cliente);
+         }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo cargar el formulario para modificar cliente";
+            return View("ListarCliente", new List<Cliente>());
+           
+        }
     }
 
     [HttpPost]
     public IActionResult ModificarClientePost(ModificarClienteViewModel c)
     {
-        if(!ModelState.IsValid)
+        try
         {
+            if(!ModelState.IsValid)
+            {
+                return RedirectToAction("ListarCliente");
+            }
+            Cliente cliente = new Cliente(c.ClienteId,c.Nombre,c.Email,c.Telefono);
+            _clienteRepository.modificarCliente(cliente);
             return RedirectToAction("ListarCliente");
         }
-        Cliente cliente = new Cliente(c.ClienteId,c.Nombre,c.Email,c.Telefono);
-        _clienteRepository.modificarCliente(cliente);
-        return RedirectToAction("ListarCliente");
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo modificar cliente";
+            return View("ListarCliente", new List<Cliente>());
+        }
     }
 
     [HttpGet]
     public IActionResult EliminarCliente(Cliente cliente)
     {
-        return View(cliente);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) 
+                return RedirectToAction("Index", "Logeo");
+
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString())
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            
+            return View(cliente);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo cargar el formulario para eliminar cliente";
+            return View("ListarCliente", new List<Cliente>());
+           
+        }
+        
     }
 
     [HttpPost]
     public IActionResult EliminarClientePost(int ClienteId)
     {
-        _clienteRepository.EliminarCliente(ClienteId);
-        return RedirectToAction("ListarCliente");
+        try
+        {
+            _clienteRepository.EliminarCliente(ClienteId);
+            return RedirectToAction("ListarCliente");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo eliminar cliente";
+            return View("ListarCliente", new List<Cliente>());
+            
+        }
     }
 }

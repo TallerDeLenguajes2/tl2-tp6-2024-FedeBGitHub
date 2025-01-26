@@ -4,6 +4,14 @@
     string admin = Rol.Admin.ToString();
 }
 
+@if (ViewBag.ErrorMessage != null)
+{
+        <div class="alert alert-danger" role="alert">
+            <p>@ViewBag.ErrorMessage</p>
+        </div>
+}
+
+
 @model List<Presupuesto>
 
         @{

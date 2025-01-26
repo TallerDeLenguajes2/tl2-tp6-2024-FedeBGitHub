@@ -1,5 +1,13 @@
 @model List<Cliente>
 
+
+@if (ViewBag.ErrorMessage != null)
+{
+        <div class="error-message">
+            <p>@ViewBag.ErrorMessage</p>
+        </div>
+}
+
         <form asp-controller="Cliente" asp-action="CrearCliente" method="get">
             <input class="btn btn-success" type="submit" value="Crear Cliente"></input>
         </form>

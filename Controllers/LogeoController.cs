@@ -19,39 +19,78 @@ public class LogeoController : Controller
     
     public IActionResult Index()
     {
-        // Si no hay una sesion iniciada
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated")))
+
+        try
         {
-            // Crear un nuevo ViewModel, pasamos el estado de autenticación
-            var model = new LogeoViewModel
+            // Si no hay una sesion iniciada
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated")))
             {
-                IsAuthenticated = HttpContext.Session.GetString("IsAuthenticated") == "true"
-            };
-            return View(model); // Pasamos el ViewModel con la propiedad de autenticación
-        }else{ // si hay una sesion iniciada no muestra el formulario sino lo redirige a home
-           return RedirectToAction("ListarCliente", "Cliente");
+                // Crear un nuevo ViewModel, pasamos el estado de autenticación
+                var model = new LogeoViewModel
+                {
+                    IsAuthenticated = HttpContext.Session.GetString("IsAuthenticated") == "true"
+                };
+                return View(model); // Pasamos el ViewModel con la propiedad de autenticación
+
+            }else{ // si hay una sesion iniciada no muestra el formulario sino lo redirige a home
+                return RedirectToAction("ListarCliente", "Cliente");
+            }
+        }
+        catch(Exception ex){
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar la página";
+            return View("Index");
         }
     }
 
     [HttpPost]
     public IActionResult Logeo(LogeoViewModel usuario)
     {
-        Usuario user = _usuarioRepository.obtenerUsuario(usuario.NomUsuario,usuario.Contrasenia);
-        
-        if (user != null)
+        try
         {
-            HttpContext.Session.SetString("IsAuthenticated", "true");
-            HttpContext.Session.SetString("NomUsuario", user.NomUsuario);
-            HttpContext.Session.SetString("Rol", user.Rol.ToString());
-            return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            //En caso de que el usuario no escriba el usuario o la contraseña mando este mensaje de error (No va a pasar porque tengo puesto los requerid en los campos del formulario)
+            if (string.IsNullOrEmpty(usuario.NomUsuario) || string.IsNullOrEmpty(usuario.Contrasenia))
+            {
+                usuario.ErrorMessage = "Por favor ingrese su nombre de usuario y contraseña.";
+                return View("Index", usuario);
+            }
+
+            Usuario user = _usuarioRepository.obtenerUsuario(usuario.NomUsuario,usuario.Contrasenia);
+            
+            if (user != null)
+            {
+                HttpContext.Session.SetString("IsAuthenticated", "true");
+                HttpContext.Session.SetString("NomUsuario", user.NomUsuario);
+                HttpContext.Session.SetString("Rol", user.Rol.ToString());
+                _logger.LogInformation("El usuario " + user.NomUsuario + " ingresó correctamente");
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }
+            usuario.ErrorMessage = "Credenciales Iválidas";
+            _logger.LogWarning("Intento de acceso invalido - Usuario: " + user.NomUsuario + " 90Clave ingresada: " + user.Contrasenia);
+            return View("Index", usuario); //No la toma una vez llega al warning pasa al catch
         }
-       
-        return RedirectToAction("Index", "Home");
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            //return RedirectToAction("Index", usuario); No funca asi
+            return View("Index", usuario);
+        }
+        
     }
 
     public IActionResult CerrarSesion()
     {
-        HttpContext.Session.Clear(); // Borra todos los datos de la sesión
-        return RedirectToAction("Index", "Logeo");
+        try
+        {
+            HttpContext.Session.Clear(); // Borra todos los datos de la sesión
+            return RedirectToAction("Index", "Logeo");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo cerrar la sesión";
+            return View("Index"); 
+        }
+        
     }
 }

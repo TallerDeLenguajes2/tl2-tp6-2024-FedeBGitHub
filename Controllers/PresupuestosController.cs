@@ -27,13 +27,22 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult ListarPresupuesto()
     {
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
-        List<Presupuesto> listaPresupuestos = _presupuestoRepository.ObtenerPresupuestos();
-        foreach (Presupuesto p in listaPresupuestos)
+        try
         {
-            p.Cliente = _clienteRepository.obtenerCliente(p.Cliente.ClienteId);
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
+            List<Presupuesto> listaPresupuestos = _presupuestoRepository.ObtenerPresupuestos();
+            foreach (Presupuesto p in listaPresupuestos)
+            {
+                p.Cliente = _clienteRepository.obtenerCliente(p.Cliente.ClienteId);
+            }
+            return View(listaPresupuestos);
         }
-        return View(listaPresupuestos);
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar presupuestos";
+            return View(new List<Presupuesto>());
+        }
     }
 
 
@@ -41,9 +50,18 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult DetallePresupuesto(int id, int ClienteId)
     {
-        
-        Presupuesto presupuesto = _presupuestoRepository.ObtenerDetalle(id);
-        return View(presupuesto);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
+            Presupuesto presupuesto = _presupuestoRepository.ObtenerDetalle(id);
+            return View(presupuesto);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el detalle";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
@@ -51,9 +69,24 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult CrearPresupuesto()
     {
-        PresupuestoViewModel presupuestoViewModel = new PresupuestoViewModel();
-        presupuestoViewModel.listaClientes = _clienteRepository.listarClientes();
-        return View(presupuestoViewModel);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                return RedirectToAction("Index", "Logeo");
+            }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }   
+            PresupuestoViewModel presupuestoViewModel = new PresupuestoViewModel();
+            presupuestoViewModel.listaClientes = _clienteRepository.listarClientes();
+            return View(presupuestoViewModel);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el formulario para crear presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
@@ -61,9 +94,18 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult CrearPresupuestoPost(int ClienteSeleccionado, Presupuesto presupuesto)
     {
-        presupuesto.Cliente = _clienteRepository.obtenerCliente(ClienteSeleccionado);
-        _presupuestoRepository.CrearPresupuesto(presupuesto);
-        return RedirectToAction("ListarPresupuesto");
+        try
+        {
+            presupuesto.Cliente = _clienteRepository.obtenerCliente(ClienteSeleccionado);
+            _presupuestoRepository.CrearPresupuesto(presupuesto);
+            return RedirectToAction("ListarPresupuesto");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo crear el presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
@@ -71,9 +113,25 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult ModificarPresupuesto(int ClienteId, Presupuesto presupuesto)
     {
-        presupuesto.Cliente = new Cliente(); // debo cambiar esto que el constructor de presupuesto inicialice el cliente
-        presupuesto.Cliente.ClienteId = ClienteId; // no se si conviene eso o hacer que traiga el Cliente completo con el metodo del repositorio
-        return View(presupuesto);
+
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                return RedirectToAction("Index", "Logeo");
+            }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }   
+            presupuesto.Cliente = new Cliente(); // debo cambiar esto que el constructor de presupuesto inicialice el cliente
+            presupuesto.Cliente.ClienteId = ClienteId; // no se si conviene eso o hacer que traiga el Cliente completo con el metodo del repositorio
+            return View(presupuesto);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el formulario para modificar presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
@@ -81,8 +139,17 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult ModificarPresupuestoPost(Presupuesto presupuesto)
     {
-        _presupuestoRepository.modificarPresupuesto(presupuesto);
-        return RedirectToAction("ListarPresupuesto");
+        try
+        {
+            _presupuestoRepository.modificarPresupuesto(presupuesto);
+            return RedirectToAction("ListarPresupuesto");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo modificar presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
     
@@ -90,9 +157,24 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult EliminarPresupuesto(int ClienteId, Presupuesto presupuesto)
     {
-        presupuesto.Cliente = new Cliente();
-        presupuesto.Cliente.ClienteId = ClienteId;
-        return View(presupuesto);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                return RedirectToAction("Index", "Logeo");
+            }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }  
+            presupuesto.Cliente = new Cliente();
+            presupuesto.Cliente.ClienteId = ClienteId;
+            return View(presupuesto);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el formulario para eliminar presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
@@ -100,8 +182,17 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult EliminarPresupuestoPost(int IdPresupuesto)
     {
-        _presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
-        return RedirectToAction("ListarPresupuesto");
+        try
+        {
+            _presupuestoRepository.EliminarPresupuesto(IdPresupuesto);
+            return RedirectToAction("ListarPresupuesto");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo eliminar presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
@@ -109,8 +200,23 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult AgregarProducto(ProductosYpresupuestoViewModel vm)
     {
-        vm.listaProductos = _productoRepository.listarProductos();
-        return View(vm);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                    return RedirectToAction("Index", "Logeo");
+                }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                    return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }  
+            vm.listaProductos = _productoRepository.listarProductos();
+            return View(vm);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar formulario para agrgar producto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
     
@@ -118,8 +224,17 @@ public class PresupuestosController : Controller
     [HttpPost]
     public IActionResult AgregarProductoPost(ProductosYpresupuestoViewModel vm)
     {
-        _presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
-        return RedirectToAction("ListarPresupuesto");
+        try
+        {
+            _presupuestoRepository.agregarDetalle(vm.IdPresupuesto,vm.IdProducto,vm.Cantidad);
+            return RedirectToAction("ListarPresupuesto");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo agregar el producto al presupuesto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 

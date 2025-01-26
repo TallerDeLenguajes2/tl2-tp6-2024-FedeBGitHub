@@ -21,64 +21,145 @@ public class ProductoController : Controller
     [HttpGet]
     public IActionResult ListarProducto()
     {
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
-        List<Producto> listaProductos = _productoRepository.listarProductos();
-        return View(listaProductos);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) return RedirectToAction ("Index", "Logeo");
+            List<Producto> listaProductos = _productoRepository.listarProductos();
+            return View(listaProductos);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar productos";
+            return View(new List<Presupuesto>());
+        }
     }
 
 
     [HttpGet]
     public IActionResult CrearProducto()
     {
-        return View(new AltaProductoViewModel());
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                return RedirectToAction("Index", "Logeo");
+            }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }   
+            return View(new AltaProductoViewModel());
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el formulario para crear productos";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
     [HttpPost]
     public IActionResult CrearProductoPost(AltaProductoViewModel producto)
     {
-        if (!ModelState.IsValid)
+        try
         {
-            return RedirectToAction("ListarProducto");
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("ListarProducto");
+            }
+            Producto p = new Producto(producto.Descripcion,producto.Precio);
+            _productoRepository.CrearProducto(p);
+            return RedirectToAction("ListarProducto"); 
         }
-        Producto p = new Producto(producto.Descripcion,producto.Precio);
-        _productoRepository.CrearProducto(p);
-        return RedirectToAction("ListarProducto"); 
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo crear el producto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
     [HttpGet]
     public IActionResult ModificarProducto(ModificarProductoViewModel producto)
     {
-        return View(producto);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                return RedirectToAction("Index", "Logeo");
+            }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }   
+            return View(producto);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el formulario para modificar producto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
     [HttpPost]
     public IActionResult ModificarProductoPost(ModificarProductoViewModel p)
     {
-         if (!ModelState.IsValid)
+        try
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("ListarProducto");
+            }
+            Producto producto = new Producto(p.IdProducto, p.Descripcion, p.Precio);
+            _productoRepository.modificarProducto( producto.IdProducto, producto);
             return RedirectToAction("ListarProducto");
         }
-        Producto producto = new Producto(p.IdProducto, p.Descripcion, p.Precio);
-        _productoRepository.modificarProducto( producto.IdProducto, producto);
-        return RedirectToAction("ListarProducto");
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "No se pudo modificar el producto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
     [HttpGet]
     public IActionResult EliminarProducto(Producto producto)
     {
-        return View(producto);
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("IsAuthenticated"))) {
+                return RedirectToAction("Index", "Logeo");
+            }
+            if (HttpContext.Session.GetString("Rol") != Rol.Admin.ToString()){
+                return RedirectToAction("ListarPresupuesto", "Presupuestos");
+            }   
+            return View(producto);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al cargar el formulario para modificar producto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
 
 
     [HttpPost]
     public IActionResult EliminarProductoPost(int IdProducto)
     {
-        _productoRepository.EliminarProducto(IdProducto);
-        return RedirectToAction("ListarProducto");
+        try
+        {
+            _productoRepository.EliminarProducto(IdProducto);
+            return RedirectToAction("ListarProducto");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            ViewBag.ErrorMessage = "Error al eliminar el producto";
+            return View("ListarPresupuesto", new List<Presupuesto>());
+        }
     }
     
 }
